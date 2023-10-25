@@ -59,7 +59,7 @@ def process_text(text_buffer, processor, model, corpus):
     with open("corpus.json", "w") as f:
         json.dump(corpus, f)
 
-def generate_text(prompt, processor, model, corpus, text_model_url="http://localhost:11434/api/generate"):
+def generate_text(prompt, processor, model, corpus, text_model_url="http://localhost:11434/api/generate"): #Prereq: curl https://ollama.ai/install.sh | sh && ollama run mistral
     cmd = [
         'curl',
         '--silent',
